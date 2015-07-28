@@ -18,8 +18,6 @@ use OT\DataDictionary;
  */
 class IndexController extends HomeController
 {
-
-
     /**系统首页**/
     public function index()
     {

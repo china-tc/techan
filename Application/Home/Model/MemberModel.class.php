@@ -72,6 +72,8 @@ class MemberModel extends Model{
         session("user_auth", null);
         unset($_SESSION['cart']);
         session("user_auth_sign", null);
+//        session_unset();
+//        session_destroy();
     }
 
 

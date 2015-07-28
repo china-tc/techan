@@ -26,13 +26,13 @@ return array(
                     'QqKEY'=>array(
                         'title'=>'QQ互联KEY：',
                         'type'=>'text',
-                        'value'=>'',
+                        'value'=>'1104713041',
                         'tip'=>'申请地址：http://connect.qq.com',
                     ),
                     'QqSecret'=>array(
                         'title'=>'QQ互联密匙：',
                         'type'=>'text',
-                        'value'=>'',
+                        'value'=>'fbRjHnRYIS9XEYU5',
                         'tip'=>'申请地址：http://connect.qq.com',
                     )
                 ),

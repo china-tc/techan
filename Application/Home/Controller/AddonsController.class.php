@@ -37,7 +37,6 @@ class AddonsController extends Controller{
 	 	$TMPL_PARSE_STRING = C('TMPL_PARSE_STRING');
         $TMPL_PARSE_STRING['__ADDONROOT__'] = __ROOT__ . "/Addons/{$_addons}";
         C('TMPL_PARSE_STRING', $TMPL_PARSE_STRING);
-
 		if(!empty($_addons) && !empty($_controller) && !empty($_action)){
 			$Addons = A("Addons://{$_addons}/{$_controller}")->$_action();
 		} else {

@@ -99,7 +99,6 @@ abstract class ThinkOauth{
         $config =  D('addons')->where(array('name'=>'SyncLogin'))->find();
         $config   =   json_decode($config['config'], true);
         $type = substr($class, 0, strlen($class)-3);
-
         if(empty($config[$type.'KEY']) || empty($config[$type.'Secret'])){
             throw new Exception('请配置您申请的APP_KEY和APP_SECRET');
         } else {

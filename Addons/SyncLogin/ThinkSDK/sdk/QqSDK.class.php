@@ -51,7 +51,7 @@ class QqSDK extends ThinkOauth{
             'openid'             => $this->openid(),
             'format'             => 'json'
         );
-        
+
         $data = $this->http($this->url($api), $this->param($params, $param), $method);
         return json_decode($data, true);
     }
