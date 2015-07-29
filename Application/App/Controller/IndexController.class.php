@@ -31,7 +31,7 @@ class IndexController extends AppController
         //左导航
         $cate = M('Category');
         $catelist = $this->menulist();
-        $result['$catelist'] = $catelist;
+        $result['catelist'] = $catelist;
 
         //分页
         $this->assign('page', D('Document')->page);
@@ -44,9 +44,11 @@ class IndexController extends AppController
         $slide = get_slide();
         $result['slide'] = $slide;
 
+
         /** 限时抢购调用* */
         $time_list = $this->timelist();
         $result['time_list'] = $time_list;
+
 
         /** 最新上架调用**/
         $bytime = $this->bytime();
@@ -80,9 +82,28 @@ class IndexController extends AppController
         $this->assign('category', $tree);
         $result['tree'] = $tree;
 
+        $result['active_list'] = $this->getActivity();
+
+        $result['notice_list'] = $this->getNotice();
+
         $this->ajaxReturn($result);
     }
-
+    /** 获取活动信息 */
+    public function getActivity()
+    {
+        $DocumentModel = D('document');
+        $map['category_id'] = 70;
+        $order = " id desc";
+        return  $DocumentModel->selectData($map,true,$order);
+    }
+    /** 获取公告信息 */
+    public function getNotice()
+    {
+        $DocumentModel = D('document');
+        $map['category_id'] = 56;
+        $order = " id desc";
+        return  $DocumentModel->selectData($map,true,$order);
+    }
     /**无限极分类菜单调用**/
     public function menulist()
     {

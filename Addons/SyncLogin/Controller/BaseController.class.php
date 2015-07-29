@@ -15,6 +15,7 @@ class BaseController extends AddonsController{
         empty($type) && $this->error('参数错误');
         //加载ThinkOauth类并实例化一个对象
         $sns  = \ThinkOauth::getInstance($type);
+
         //跳转到授权页面
         redirect($sns->getRequestCodeURL());
     }

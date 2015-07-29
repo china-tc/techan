@@ -1,0 +1,108 @@
+[ 2015-07-28T10:33:42+08:00 ] 127.0.0.1 /App/index
+NOTIC: [8] Use of undefined constant HTTP_CLIENT_IP - assumed 'HTTP_CLIENT_IP' F:\gitHub\techan\Application\Common\Common\function.php 第 821 行.
+NOTIC: [8] Use of undefined constant HTTP_X_FORWARDED_FOR - assumed 'HTTP_X_FORWARDED_FOR' F:\gitHub\techan\Application\Common\Common\function.php 第 823 行.
+NOTIC: [8] Use of undefined constant REMOTE_ADDR - assumed 'REMOTE_ADDR' F:\gitHub\techan\Application\Common\Common\function.php 第 825 行.
+NOTIC: [8] Use of undefined constant REMOTE_ADDR - assumed 'REMOTE_ADDR' F:\gitHub\techan\Application\Common\Common\function.php 第 825 行.
+NOTIC: [8] Use of undefined constant unknown - assumed 'unknown' F:\gitHub\techan\Application\Common\Common\function.php 第 825 行.
+NOTIC: [8] Use of undefined constant REMOTE_ADDR - assumed 'REMOTE_ADDR' F:\gitHub\techan\Application\Common\Common\function.php 第 826 行.
+NOTIC: [8] Undefined index: HTTP_REFERER F:\gitHub\techan\Application\Common\Common\function.php 第 852 行.
+SQL: SHOW COLUMNS FROM `tc_records` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `tc_records` WHERE ( ip='127.0.0.1' and tag='1' and page='index' )  [ RunTime:0.0030s ]
+SQL: SELECT `time` FROM `tc_records` WHERE ( ip='127.0.0.1' and tag='1' and page='index' ) ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tc_category` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `tc_category` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`name`,`pid`,`title` FROM `tc_category` WHERE `display` = 1 AND `ismenu` = 1 AND `status` = 1 ORDER BY sort desc  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `tc_document` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `tc_category` [ RunTime:0.0050s ]
+SQL: SELECT `id` FROM `tc_category` WHERE ( display=1 and pid=0 )  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `tc_slide` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `tc_slide` WHERE ( status=1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tc_document_product` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `tc_document_product` WHERE ( mark="2" ) ORDER BY id desc LIMIT 6   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `tc_document_product` ORDER BY id desc LIMIT 6   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tc_document` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `tc_document` ORDER BY sale desc LIMIT 6   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `tc_document` WHERE ( position="4" )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tc_config` [ RunTime:0.0050s ]
+SQL: SELECT `value` FROM `tc_config` WHERE ( id="40" ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tc_shopcart` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `tc_member` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `tc_shopcart` WHERE `uid` = null  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: cart F:\gitHub\techan\Application\App\Controller\IndexController.class.php 第 71 行.
+SQL: SELECT `type`,`name`,`value` FROM `tc_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `tc_category` WHERE ( ismenu='2' and pid='0' ) ORDER BY id asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `tc_category` WHERE ( pid='77' )  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `tc_category` WHERE ( pid='133' )  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `tc_category` WHERE ( pid='137' )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `tc_category` WHERE ( pid='141' )  [ RunTime:0.0020s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`ismenu` FROM `tc_category` WHERE `status` = 1 AND `ismenu` = 1 ORDER BY sort desc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: _ F:\gitHub\techan\Application\App\Controller\IndexController.class.php 第 196 行.
+NOTIC: [2] Invalid argument supplied for foreach() F:\gitHub\techan\Application\App\Controller\IndexController.class.php 第 196 行.
+NOTIC: [8] Undefined index: _ F:\gitHub\techan\Application\App\Controller\IndexController.class.php 第 196 行.
+NOTIC: [2] Invalid argument supplied for foreach() F:\gitHub\techan\Application\App\Controller\IndexController.class.php 第 196 行.
+NOTIC: [8] Undefined index: _ F:\gitHub\techan\Application\App\Controller\IndexController.class.php 第 196 行.
+NOTIC: [2] Invalid argument supplied for foreach() F:\gitHub\techan\Application\App\Controller\IndexController.class.php 第 196 行.
+NOTIC: [8] Undefined index: _ F:\gitHub\techan\Application\App\Controller\IndexController.class.php 第 196 行.
+NOTIC: [2] Invalid argument supplied for foreach() F:\gitHub\techan\Application\App\Controller\IndexController.class.php 第 196 行.
+SQL: SHOW COLUMNS FROM `tc_document` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `tc_document` WHERE `category_id` IN ('145','146','147','148','149') AND `status` = 1 ORDER BY id desc LIMIT 10   [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: _ F:\gitHub\techan\Application\App\Controller\IndexController.class.php 第 196 行.
+NOTIC: [2] Invalid argument supplied for foreach() F:\gitHub\techan\Application\App\Controller\IndexController.class.php 第 196 行.
+NOTIC: [8] Undefined index: _ F:\gitHub\techan\Application\App\Controller\IndexController.class.php 第 196 行.
+NOTIC: [2] Invalid argument supplied for foreach() F:\gitHub\techan\Application\App\Controller\IndexController.class.php 第 196 行.
+SQL: SELECT * FROM `tc_document` WHERE `category_id` IN ('150','151','152') AND `status` = 1 ORDER BY id desc LIMIT 10   [ RunTime:0.0010s ]
+
+[ 2015-07-28T10:34:34+08:00 ] 127.0.0.1 /index.php?s=/App/index
+NOTIC: [8] Use of undefined constant HTTP_CLIENT_IP - assumed 'HTTP_CLIENT_IP' F:\gitHub\techan\Application\Common\Common\function.php 第 821 行.
+NOTIC: [8] Use of undefined constant HTTP_X_FORWARDED_FOR - assumed 'HTTP_X_FORWARDED_FOR' F:\gitHub\techan\Application\Common\Common\function.php 第 823 行.
+NOTIC: [8] Use of undefined constant REMOTE_ADDR - assumed 'REMOTE_ADDR' F:\gitHub\techan\Application\Common\Common\function.php 第 825 行.
+NOTIC: [8] Use of undefined constant REMOTE_ADDR - assumed 'REMOTE_ADDR' F:\gitHub\techan\Application\Common\Common\function.php 第 825 行.
+NOTIC: [8] Use of undefined constant unknown - assumed 'unknown' F:\gitHub\techan\Application\Common\Common\function.php 第 825 行.
+NOTIC: [8] Use of undefined constant REMOTE_ADDR - assumed 'REMOTE_ADDR' F:\gitHub\techan\Application\Common\Common\function.php 第 826 行.
+NOTIC: [8] Undefined index: HTTP_REFERER F:\gitHub\techan\Application\Common\Common\function.php 第 852 行.
+SQL: SHOW COLUMNS FROM `tc_records` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `tc_records` WHERE ( ip='127.0.0.1' and tag='1' and page='index' )  [ RunTime:0.0010s ]
+SQL: SELECT `time` FROM `tc_records` WHERE ( ip='127.0.0.1' and tag='1' and page='index' ) ORDER BY id desc LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `tc_category` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `tc_category` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`name`,`pid`,`title` FROM `tc_category` WHERE `display` = 1 AND `ismenu` = 1 AND `status` = 1 ORDER BY sort desc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tc_document` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `tc_category` [ RunTime:0.0040s ]
+SQL: SELECT `id` FROM `tc_category` WHERE ( display=1 and pid=0 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tc_slide` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `tc_slide` WHERE ( status=1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tc_document_product` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `tc_document_product` WHERE ( mark="2" ) ORDER BY id desc LIMIT 6   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `tc_document_product` ORDER BY id desc LIMIT 6   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tc_document` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `tc_document` ORDER BY sale desc LIMIT 6   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `tc_document` WHERE ( position="4" )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tc_config` [ RunTime:0.0050s ]
+SQL: SELECT `value` FROM `tc_config` WHERE ( id="40" ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tc_shopcart` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `tc_member` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `tc_shopcart` WHERE `uid` = null  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: cart F:\gitHub\techan\Application\App\Controller\IndexController.class.php 第 71 行.
+SQL: SELECT `type`,`name`,`value` FROM `tc_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `tc_category` WHERE ( ismenu='2' and pid='0' ) ORDER BY id asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `tc_category` WHERE ( pid='77' )  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `tc_category` WHERE ( pid='133' )  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `tc_category` WHERE ( pid='137' )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `tc_category` WHERE ( pid='141' )  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`ismenu` FROM `tc_category` WHERE `status` = 1 AND `ismenu` = 1 ORDER BY sort desc  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: _ F:\gitHub\techan\Application\App\Controller\IndexController.class.php 第 196 行.
+NOTIC: [2] Invalid argument supplied for foreach() F:\gitHub\techan\Application\App\Controller\IndexController.class.php 第 196 行.
+NOTIC: [8] Undefined index: _ F:\gitHub\techan\Application\App\Controller\IndexController.class.php 第 196 行.
+NOTIC: [2] Invalid argument supplied for foreach() F:\gitHub\techan\Application\App\Controller\IndexController.class.php 第 196 行.
+NOTIC: [8] Undefined index: _ F:\gitHub\techan\Application\App\Controller\IndexController.class.php 第 196 行.
+NOTIC: [2] Invalid argument supplied for foreach() F:\gitHub\techan\Application\App\Controller\IndexController.class.php 第 196 行.
+NOTIC: [8] Undefined index: _ F:\gitHub\techan\Application\App\Controller\IndexController.class.php 第 196 行.
+NOTIC: [2] Invalid argument supplied for foreach() F:\gitHub\techan\Application\App\Controller\IndexController.class.php 第 196 行.
+SQL: SHOW COLUMNS FROM `tc_document` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `tc_document` WHERE `category_id` IN ('145','146','147','148','149') AND `status` = 1 ORDER BY id desc LIMIT 10   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: _ F:\gitHub\techan\Application\App\Controller\IndexController.class.php 第 196 行.
+NOTIC: [2] Invalid argument supplied for foreach() F:\gitHub\techan\Application\App\Controller\IndexController.class.php 第 196 行.
+NOTIC: [8] Undefined index: _ F:\gitHub\techan\Application\App\Controller\IndexController.class.php 第 196 行.
+NOTIC: [2] Invalid argument supplied for foreach() F:\gitHub\techan\Application\App\Controller\IndexController.class.php 第 196 行.
+SQL: SELECT * FROM `tc_document` WHERE `category_id` IN ('150','151','152') AND `status` = 1 ORDER BY id desc LIMIT 10   [ RunTime:0.0010s ]
+

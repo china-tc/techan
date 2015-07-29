@@ -6,12 +6,10 @@
 <title><?php echo ($meta_title); ?>_<?php echo C('WEB_SITE_TITLE');?></title>
 <link href="/Public/Home/css/top.css" rel="stylesheet">
 <link href="/Public/Home/css/common.css" rel="stylesheet">
-
 <link href="/Public/Home/css/footer.css" rel="stylesheet">
 
 <script type="text/javascript" src="/Public/Home/js/public.js"></script>
 <script type="text/javascript" src="/Public/Home/js/jquery.min.js"></script>
-
 
 
 
@@ -189,8 +187,8 @@ setTimeout("PicNumClick()",3000);
 <div id="msg">
 <div class="message"><ul><?php $__CATE__ = D('Category')->getChildrenId(56);$__LIST__ = D('Document')->page(!empty($_GET["p"])?$_GET["p"]:1,10)->lists($__CATE__, '`level` DESC,`id` DESC', 1,true); if(is_array($__LIST__)): $i = 0; $__LIST__ = $__LIST__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$article): $mod = ($i % 2 );++$i;?><li><a href="<?php echo U('Article/detail?id='.$vo['id']);?>">
                      <?php echo ($article["title"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?> </ul></div>
-<div class="message"  style="display: none"><ul><?php if(is_array($article)): $i = 0; $__LIST__ = array_slice($article,0,6,true);if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li><a href="<?php echo U('Article/detail?id='.$vo['id']);?>">
-                     <?php echo ($article["title"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?></div>
+
+<div class="message"  style="display: none"><ul><?php $__CATE__ = D('Category')->getChildrenId(70);$__LIST__ = D('Document')->page(!empty($_GET["p"])?$_GET["p"]:1,10)->lists($__CATE__, '`level` DESC,`id` DESC', 1,true); if(is_array($__LIST__)): $i = 0; $__LIST__ = $__LIST__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$article): $mod = ($i % 2 );++$i;?><li><a href="<?php echo U('Article/detail?id='.$vo['id']);?>"><?php echo ($article["title"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?> </ul></div>
 <div class="message"  style="display: none"></div>
 </div>
 

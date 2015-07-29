@@ -390,6 +390,7 @@ class AdminController extends Controller {
     protected function lists ($model,$where=array(),$order='',$field=true){
         $options    =   array();
         $REQUEST    =   (array)I('request.');
+
         if(is_string($model)){
             $model  =   M($model);
         }

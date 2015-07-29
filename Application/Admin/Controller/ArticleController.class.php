@@ -163,6 +163,7 @@ class ArticleController extends AdminController {
                 $models     =   get_category($cate_id, 'model');
 				// 获取分组定义
 				$groups		=	get_category($cate_id, 'groups');
+
 				if($groups){
 					$groups	=	parse_field_attr($groups);
 				}
@@ -191,7 +192,7 @@ class ArticleController extends AdminController {
 
         //解析列表规则
         $fields =	array();
-        $grids  =	preg_split('/[;\r\n]+/s', trim($model['list_grid']));
+        $grids  =	preg_split('/[\r\n]+/s', trim($model['list_grid']));
         foreach ($grids as &$value) {
             // 字段:标题:链接
             $val      = explode(':', $value);
@@ -213,7 +214,6 @@ class ArticleController extends AdminController {
                 $fields[] = $array[0];
             }
         }
-
         // 文档模型列表始终要获取的数据字段 用于其他用途
         $fields[] = 'category_id';
         $fields[] = 'model_id';
@@ -221,8 +221,9 @@ class ArticleController extends AdminController {
         // 过滤重复字段信息
         $fields =   array_unique($fields);
         // 列表查询
-       // $list   =   $this->getDocumentList($cate_id,$model_id,$position,$fields,$group_id);
-       $list   =   $this->getDocumentList($cate_id,2,$position,$fields);// $model_id用2替代
+       $list   =   $this->getDocumentList($cate_id,$model_id,$position,$fields,$group_id);
+//       $list   =   $this->getDocumentList($cate_id,$model_id,$position,$fields);// $model_id用2替代
+
         // 列表显示处理
         $list   =   $this->parseDocumentList($list,$model_id);
         
@@ -271,7 +272,6 @@ class ArticleController extends AdminController {
 
         // 构建列表数据
         $Document = M('Document');
-
         if($cate_id){
             $map['category_id'] =   $cate_id;
         }
@@ -280,6 +280,7 @@ class ArticleController extends AdminController {
             unset($map['category_id']);
         }
         $Document->alias('DOCUMENT');
+
         if(!is_null($model_id)){
             $map['model_id']    =   $model_id;
             if(is_array($field) && array_diff($Document->getDbFields(),$field)){
@@ -298,6 +299,7 @@ class ArticleController extends AdminController {
 		if(!is_null($group_id)){
 			$map['group_id']	=	$group_id;
 		}
+
         $list = $this->lists($Document,$map,'id DESC',$field);
 
         if($map['pid']){

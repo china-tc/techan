@@ -58,7 +58,10 @@ class DocumentModel extends Model{
         $map = $this->listMap($category, $status);
         return $this->field($field)->where($map)->order($order)->select();
     }
-
+    public function selectData($map = '', $field = true, $order = '')
+    {
+        return $this->field($field)->where($map)->order($order)->select();
+    }
     /**
      * 计算列表总数
      * @param  number  $category 分类ID

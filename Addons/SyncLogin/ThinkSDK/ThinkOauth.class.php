@@ -156,7 +156,7 @@ abstract class ThinkOauth{
             'redirect_uri'  => $this->Callback,
             'response_type' => $this->ResponseType,
         );
-        
+
         //获取额外参数
         if($this->Authorize){
             parse_str($this->Authorize, $_param);

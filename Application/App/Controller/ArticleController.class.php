@@ -18,7 +18,7 @@ class ArticleController extends AppController {
 
 		$category = D('Category')->info($cateid);
 		$id=$category['id'];
-		
+
 		$cid = D('Category')->getChildrenId($id);
 		$map['category_id']=array("in",$cid);
 		$map['status']=1;
@@ -26,19 +26,19 @@ class ArticleController extends AppController {
 		$pos=M('Document')->where("position!=0")->select();
 		$this->assign("poslist",$pos);
 		 $key=I('get.order');
-		 $sort=I('get.sort');  
+		 $sort=I('get.sort');
        if(isset($key)){
-		  
-		if($key=="1"){   $listsort="view"." ".$sort;}  
-		if($key=="2"){ $listsort="id"." ".$sort;} 
-		if($key=="3"){  $listsort="price"." ".$sort;} 
-		if($key=="4"){  $listsort="sale"." ".$sort;}  	
-		   } 
+
+		if($key=="1"){   $listsort="view"." ".$sort;}
+		if($key=="2"){ $listsort="id"." ".$sort;}
+		if($key=="3"){  $listsort="price"." ".$sort;}
+		if($key=="4"){  $listsort="sale"." ".$sort;}
+		   }
 	if(empty($key)){$key="1";$see="asc";
 			$order="view";$sort="asc";
-		    $listsort=$order." ".$sort;			
+		    $listsort=$order." ".$sort;
 			}
-		
+
     if($sort=="asc"){$see="desc";}
       if($sort=="desc"){$see="asc";}
        $this->assign('see',$see);
@@ -54,7 +54,7 @@ class ArticleController extends AppController {
 		$Page->setConfig('theme','%FIRST% %UP_PAGE% %LINK_PAGE% %DOWN_PAGE% %END% %HEADER%');
 		$show= $Page->show();
 		$list= M('Document')->where($map)->order( $listsort)->limit($Page->firstRow.','.$Page->listRows)->select();
-		$this->assign('list',$list);// 赋值数据集
+		$this->assign('list',$list);//?赋值数据集
 		$this->assign('page',$show);//
 		//获取分类的id
 		$name=$category['name'];

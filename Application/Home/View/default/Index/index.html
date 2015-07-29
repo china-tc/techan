@@ -108,8 +108,8 @@ setTimeout("PicNumClick()",3000);
 <div id="msg">
 <div class="message"><ul><article:list name="article" limit="6" category="56" child="true"><li><a href="{:U('Article/detail?id='.$vo['id'])}">
                      {$article.title}</a></li></article:list> </ul></div>
-<div class="message"  style="display: none"><ul><volist name="article"  id="vo" offset="0" length="6"><li><a href="{:U('Article/detail?id='.$vo['id'])}">
-                     {$article.title}</a></li></volist></div>
+
+<div class="message"  style="display: none"><ul><article:list name="article" limit="6" category="70" child="true"><li><a href="{:U('Article/detail?id='.$vo['id'])}">{$article.title}</a></li></article:list> </ul></div>
 <div class="message"  style="display: none"></div>
 </div>
 

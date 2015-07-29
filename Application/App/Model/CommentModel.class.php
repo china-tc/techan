@@ -21,17 +21,17 @@ class CommentModel extends Model{
     );
 
  protected $_auto = array(
- 
+
         array('create_time', NOW_TIME, self::MODEL_INSERT),
         array('update_time', NOW_TIME, self::MODEL_BOTH),
-       
+
     );
 
     /**
      * 获取优惠券详细信息
      * @param  milit   $id ID或标识
      * @param  boolean $field 查询字段
-     * @return array  
+     * @return array
      * @author 烟消云散 <1010422715@qq.com>
      */
     public function info($id, $field = true){
@@ -81,5 +81,5 @@ class CommentModel extends Model{
         return $res;
     }
 
-    
+
 }

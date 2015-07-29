@@ -39,6 +39,7 @@ class Article extends TagLib{
         $parse .= '$__CATE__, \'`level` DESC,`id` DESC\', 1,';
         $parse .= $field . ');';
         $parse .= ' ?>';
+
         $parse .= '<volist name="__LIST__" id="'. $name .'">';
         $parse .= $content;
         $parse .= '</volist>';

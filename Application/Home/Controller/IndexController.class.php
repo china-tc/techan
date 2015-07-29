@@ -31,7 +31,6 @@ class IndexController extends HomeController
         $catelist = $this->menulist();
         $this->assign('categoryq', $catelist);
 
-
         $this->assign('page', D('Document')->page);//分页
         $user = M('category');
         $id = $user->where('display=1 and pid=0')->getField('id', true);
@@ -40,6 +39,7 @@ class IndexController extends HomeController
         /** 幻灯片调用* */
         $slide = get_slide();
         $this->assign('slide', $slide);
+
         /** 限时抢购调用* */
         $timelist = $this->timelist();
         $this->assign('timelist', $timelist);
@@ -47,10 +47,12 @@ class IndexController extends HomeController
         /** 最新上架调用**/
         $bytime = $this->bytime();
         $this->assign('bytime', $bytime);
+
+
         $totalsales = $this->totalsales();
+        $this->assign('totalsales', $totalsales);
 
         /** 热卖调用*/
-        $this->assign('totalsales', $totalsales);
         $Carousel = $this->Carousel();
         $this->assign('carousel', $Carousel);
 
@@ -74,7 +76,7 @@ class IndexController extends HomeController
         $tree = $this->maketree();
         $this->assign('category', $tree);
 
-
+        A("App/");
         $this->meta_title = '首页';
         $this->display();
     }
